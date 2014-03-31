@@ -63,7 +63,8 @@ project and you should be ready to go! It should look something like below:
 
 ### Setup your Database connection
 Add the database connection information in config/autoload/local.php.
-    ```
+
+```php
     return array(
         // ...
         'doctrine' => array(
@@ -81,12 +82,12 @@ Add the database connection information in config/autoload/local.php.
             )
         ),
     );
-    ```
+```
 
 ### Install Doctrine modules and Data fixtures
 Doctrine can be integrated into Zend Framework 2 as a “module” which provides all the libraries and configuration in a self-contained bundle.
     
-    ```
+```javascript
     {
         "name": "zendframework/skeleton-application",
         "description": "Zend 2 Doctrine2 Skeleton Application",
@@ -111,7 +112,7 @@ Doctrine can be integrated into Zend Framework 2 as a “module” which provide
             "symfony/yaml": "dev-master"
         }
     }
-    ```
+```
 
 Then run php composer.phar update to install the modules.
 
@@ -119,6 +120,7 @@ Then run php composer.phar update to install the modules.
 ### Configure Doctrine
 Edit $PROJECT_DIR/config/application.config.php and add DoctrineModule and DoctrineORMModule to the list of modules–in that order, and before the Album module. Like this:
 
+```php
     return array(
         'modules' => array(
             'Application',
@@ -129,7 +131,7 @@ Edit $PROJECT_DIR/config/application.config.php and add DoctrineModule and Doctr
         ),
     // ...,
     );
-
+```
 
 
 ### Generate Doctrine entities
