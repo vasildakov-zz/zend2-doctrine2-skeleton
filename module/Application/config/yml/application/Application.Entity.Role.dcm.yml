@@ -1,0 +1,17 @@
+Application\Entity\Role:
+  type: entity
+  table: role
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 50
+      unique: true
+  oneToMany:
+    users:
+      targetEntity: Application\Entity\User
+      mappedBy: role

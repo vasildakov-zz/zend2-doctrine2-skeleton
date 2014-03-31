@@ -1,0 +1,11 @@
+// https://github.com/sseidenthal/Zf2Doctrine2-Skeleton
+// https://github.com/sseidenthal/Zf2Doctrine2-Skeleton/blob/master/README.md
+// http://www.fadoe.de/blog/archives/388-ZF2-und-Doctrine-als-Modul-einbinden.html
+
+// http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html
+
+
+./vendor/bin/doctrine-module orm:generate-entities module/Application/src/
+
+./vendor/bin/doctrine-module orm:generate-entities --update-entities="true" --generate-methods="true" module/Application/src
+
