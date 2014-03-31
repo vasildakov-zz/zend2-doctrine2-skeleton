@@ -1,4 +1,5 @@
 Application\Entity\Role:
+  repositoryClass: Application\Repository\RoleRepository
   type: entity
   table: role
   id:
@@ -13,5 +14,5 @@ Application\Entity\Role:
       unique: true
   oneToMany:
     users:
-      targetEntity: Application\Entity\User
+      targetEntity: \Application\Entity\User
       mappedBy: role

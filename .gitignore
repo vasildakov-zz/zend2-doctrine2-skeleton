@@ -10,5 +10,5 @@ nbproject
 composer.lock
 
 data/cache/*
-
+data/cache/DoctrineORMModule/*
 vendor/*

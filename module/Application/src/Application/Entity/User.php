@@ -25,7 +25,7 @@ class User
     private $username;
 
     /**
-     * @var \Entity\Role
+     * @var \Application\Entity\Role
      */
     private $role;
 
@@ -89,10 +89,10 @@ class User
     /**
      * Set role
      *
-     * @param \Entity\Role $role
+     * @param \Application\Entity\Role $role
      * @return User
      */
-    public function setRole(\Entity\Role $role = null)
+    public function setRole(\Application\Entity\Role $role = null)
     {
         $this->role = $role;
 
@@ -102,7 +102,7 @@ class User
     /**
      * Get role
      *
-     * @return \Entity\Role 
+     * @return \Application\Entity\Role 
      */
     public function getRole()
     {

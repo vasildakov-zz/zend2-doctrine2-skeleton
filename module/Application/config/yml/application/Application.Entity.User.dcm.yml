@@ -1,4 +1,5 @@
 Application\Entity\User:
+  repositoryClass: Application\Repository\UserRepository
   type: entity
   table: user
   id:
@@ -15,7 +16,7 @@ Application\Entity\User:
       length: 128
   oneToOne:
     role:
-      targetEntity: Application\Entity\Role
+      targetEntity: \Application\Entity\Role
       inversedBy: user
       joinColumn:
         name: role_id

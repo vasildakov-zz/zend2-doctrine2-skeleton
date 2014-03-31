@@ -68,10 +68,10 @@ class Role
     /**
      * Add users
      *
-     * @param \Entity\User $users
+     * @param \Application\Entity\User $users
      * @return Role
      */
-    public function addUser(\Entity\User $users)
+    public function addUser(\Application\Entity\User $users)
     {
         $this->users[] = $users;
 
@@ -81,9 +81,9 @@ class Role
     /**
      * Remove users
      *
-     * @param \Entity\User $users
+     * @param \Application\Entity\User $users
      */
-    public function removeUser(\Entity\User $users)
+    public function removeUser(\Application\Entity\User $users)
     {
         $this->users->removeElement($users);
     }
