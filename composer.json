@@ -16,7 +16,6 @@
         "zendframework/zendgdata": "2.*",
         "doctrine/doctrine-module": "0.*",
         "doctrine/doctrine-orm-module": "0.*",
-        "doctrine/data-fixtures" : "*",
         "hounddog/doctrine-data-fixture-module": "0.0.*",
         "gedmo/doctrine-extensions": "2.3.*",
         "doctrine/annotations": "dev-master",
