@@ -62,7 +62,71 @@ project and you should be ready to go! It should look something like below:
     </VirtualHost>
 
 ### Setup your Database connection
+Add the database connection information in config/autoload/local.php.
 
-### How to generate the sample entities
+    return array(
+        // ...
+        'doctrine' => array(
+            'connection' => array(
+                'orm_default' => array(
+                    'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                    'params' => array(
+                        'host'     => 'localhost',
+                        'port'     => '3306',
+                        'user'     => 'username',
+                        'password' => 'xxxxxxxx',
+                        'dbname'   => 'database',
+                    )
+                )
+            )
+        ),
+    );
 
 
+### Install Doctrine modules
+Doctrine can be integrated into Zend Framework 2 as a “module” which provides all the libraries and configuration in a self-contained bundle.
+
+    {
+        "name": "zendframework/skeleton-application",
+        "description": "Zend 2 Doctrine2 Skeleton Application",
+        "license": "BSD-3-Clause",
+        "keywords": [
+            "framework",
+            "zf2",
+            "Doctrine",
+            "Doctrine2"
+        ],
+        "homepage": "http://framework.zend.com/",
+        "require": {
+            "php": ">=5.3.3",
+            "zendframework/zendframework": "2.3.*",
+            "zendframework/zend-developer-tools": "dev-master",
+            "zendframework/zendgdata": "2.*",
+            "doctrine/doctrine-module": "0.*",
+            "doctrine/doctrine-orm-module": "0.*",
+            "hounddog/doctrine-data-fixture-module": "0.0.*",
+            "gedmo/doctrine-extensions": "2.3.*",
+            "doctrine/annotations": "dev-master",
+            "symfony/yaml": "dev-master"
+        }
+    }
+Then run php composer.phar update to install the modules.
+
+
+### Configure Doctrine
+Edit $PROJECT_DIR/config/application.config.php and add DoctrineModule and DoctrineORMModule to the list of modules–in that order, and before the Album module. Like this:
+
+    return array(
+        'modules' => array(
+            'Application',
+            'DoctrineModule',
+            'DoctrineORMModule',
+            'DoctrineDataFixtureModule',
+            'ZendDeveloperTools',
+        ),
+    // ...,
+    );
+
+
+
+### Generate Doctrine entities
