@@ -131,20 +131,27 @@ Edit $PROJECT_DIR/config/application.config.php and add DoctrineModule and Doctr
 
 ### Generate Doctrine entities
 ...
+
 Create schema
+
     ./vendor/bin/doctrine-module orm:schema-tool:drop --force
     ./vendor/bin/doctrine-module orm:schema-tool:create
     ./vendor/bin/doctrine-module orm:validate-schema
 
 Generate proxies
+
     ./vendor/bin/doctrine-module orm:generate:proxies
 
 Generate entities
+
     ./vendor/bin/doctrine-module orm:generate-entities --update-entities="true" --generate-methods="true" module/Application/src
 
 Generate repositories
+
     ./vendor/bin/doctrine-module orm:generate-repositories module/Application/src
+
 
 ### Import Data fixtures
 ...
+
     ./vendor/bin/doctrine-module data-fixture:import
