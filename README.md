@@ -63,7 +63,7 @@ project and you should be ready to go! It should look something like below:
 
 ### Setup your Database connection
 Add the database connection information in config/autoload/local.php.
-
+    ```php
     return array(
         // ...
         'doctrine' => array(
@@ -81,11 +81,12 @@ Add the database connection information in config/autoload/local.php.
             )
         ),
     );
-
+    ```
 
 ### Install Doctrine modules and Data fixtures
 Doctrine can be integrated into Zend Framework 2 as a “module” which provides all the libraries and configuration in a self-contained bundle.
-
+    
+    ```js
     {
         "name": "zendframework/skeleton-application",
         "description": "Zend 2 Doctrine2 Skeleton Application",
@@ -110,6 +111,8 @@ Doctrine can be integrated into Zend Framework 2 as a “module” which provide
             "symfony/yaml": "dev-master"
         }
     }
+    ```
+    
 Then run php composer.phar update to install the modules.
 
 
